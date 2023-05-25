@@ -1,0 +1,251 @@
+/* Google Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+::selection{
+    color: rgb(0, 0, 0);
+    background-color: rgb(110, 222, 97);
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(162, 162, 247)
+}
+.img-editor{
+    background: rgb(33, 41, 49);
+    padding: 30px 35px 35px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 0px 10px;
+    margin: 10px;
+    width: 850px;
+}
+.img-editor.disable .editor-panel,
+.img-editor.disable .controls{
+    opacity: 0.5;
+    pointer-events: none;
+}
+.img-editor h3{
+    color: white;
+    margin-bottom: 20px;
+    font-weight:500;
+}
+.img-editor .wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.editor-panel{
+    padding: 15px 20px;
+    width: 290px;
+    height: 350px;
+    border-radius: 10px;
+    border: 2px solid rgb(5, 7, 8);
+}
+.editor-panel .title{
+    display: block;
+    color: rgb(185, 185, 185);
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+.editor-panel .options,
+.controls{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.editor-panel button{
+    outline: none;
+    height: 35px;
+    font-size: 15px;
+    font-weight: 450;
+    color: rgb(223, 215, 215);
+    background: rgb(17, 20, 25);
+    border-radius: 5px;
+    margin-bottom: 12px;
+    border: 1px solid rgb(9, 13, 15);
+}
+.editor-panel .filter button{
+    width: calc(100% / 2 - 4px);
+}
+.editor-panel button:hover{
+    color: rgb(110, 222, 97);
+    border-color: rgb(110, 222, 97);
+}
+.filter button.active{
+    color: rgb(0, 0, 0);
+    border-color: rgb(110, 222, 97);
+    background: rgb(110, 222, 97);
+}
+.filter .slider{
+    margin-top: 12px;
+}
+.filter .slider .filter-info{
+    display: flex;
+    color: rgb(185, 185, 185);
+    font-size: 15px;
+    justify-content: space-between;
+}
+.filter .slider input{
+    width: 100%;
+    height: 5px;
+    accent-color: rgb(110, 222, 97);
+}
+.editor-panel .rotate{
+    margin-top: 17px;
+}
+.editor-panel .rotate button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% / 4 - 3px);
+}
+.editor-panel .rotate button:nth-child(3),
+.editor-panel .rotate button:nth-child(4){
+    font-size: 17px;
+}
+.rotate .options button:active{
+    color: rgb(0, 0, 0);
+    background: rgb(110, 222, 97);
+    border-color: rgb(110, 222, 97);
+}
+.preview-box{
+    width: 75%;
+}
+.preview-img{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.preview-img img{
+    max-width: 500px;
+    max-height: 500px;
+    width: 100%;
+    height: 100%;
+    vertical-align: bottom;
+    object-fit: contain;
+}
+.drag-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(17, 20, 25);
+    max-width: 500px;
+    border-radius: 5px;
+    overflow: hidden;
+    min-height: 500px;
+    position: relative;
+}
+.drag-area .text-wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.drag-area .text-wrapper.hide{
+    display: none;
+}
+.drag-area .text-wrapper .icon{
+    font-size: 60px;
+    color: rgb(110, 222, 97);
+}
+.drag-area .text-wrapper .text{
+    font-size: 25px;
+    font-weight: 500;
+    color: rgb(185, 185, 185);
+}
+.drag-area .text-wrapper .text2{
+    color: rgb(185, 185, 185);
+}
+.drag-area .text-wrapper .support-text{
+    font-size: 15px;
+    color: rgb(153, 153, 153);
+    margin: 20px;
+}
+.drag-area .text-wrapper .browse{
+    font-size: 25px;
+    font-weight: 500;
+    color: rgb(110, 222, 97);
+    cursor: pointer;
+}
+.controls{
+    margin-top: 20px;
+}
+.controls button{
+    padding: 10px 15px;
+    font-size: 15px;
+    border-radius: 3px;
+    outline: none;
+    color: white;
+    background: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.controls .reset-filter,
+.controls .choose-img{
+    color: rgb(185, 185, 185);
+    border: 1px solid rgb(17, 20, 25);
+    background-color: rgb(17, 20, 25);
+}
+.controls .reset-filter:hover,
+.controls .choose-img:hover{
+    color: rgb(110, 222, 97);
+    border-color: rgb(110, 222, 97);
+}
+.controls .save-img{
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    margin-left: 10px;
+    background: rgb(110, 222, 97);
+    border: 1px solid rgb(110, 222, 97);
+}
+
+@media (max-width: 750px){
+    .img-editor{
+        padding: 25px;
+    }
+    .img-editor .wrapper{
+        flex-wrap: wrap-reverse;
+    }
+    .editor-panel,
+    .drag-area,
+    .preview-box{
+        width: 100%;
+        max-width: inherit;
+    }
+    .drag-area{
+        min-height: 0;
+        max-height: 350px;
+    }
+    .preview-box .preview-img{
+        width: 100%;
+    }
+}
+@media (max-width: 555px){
+    .controls{
+        flex-wrap: wrap;
+    }
+    .row{
+        width: 100%;
+    }
+    .reset-filter,
+    .choose-img,
+    .save-img{
+        width: 100%;
+        margin-top: 10px;
+    }
+}
